@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1da5142f82bc44ab399c03c62a65cc, type: 3}
+  m_Name: Action_Flee
+  m_EditorClassIdentifier: 
+  cost: 1
+  preconditions:
+  - effect: 4
+    isActive: 1
+  postconditions:
+  - effect: 4
+    isActive: 0
+  fleeDistance: 15
+  ThreatLayer:
+    serializedVersion: 2
+    m_Bits: 64
