@@ -9,7 +9,6 @@ public abstract class Goal<T> : ScriptableObject, IGoal
 
     protected T owner;
 
-    [field: SerializeField] public List<EffectState> Preconditions { get; protected set; } = new List<EffectState>();
     [field: SerializeField] public List<EffectState> Postconditions { get; protected set; } = new List<EffectState>();
 
     public abstract void Initialize(T agent);
@@ -21,6 +20,5 @@ public interface IGoal
     string name { get; }
     int Priority { get; }
     bool IsViable(State state);
-    List<EffectState> Preconditions { get; }
     List<EffectState> Postconditions { get; }
 }

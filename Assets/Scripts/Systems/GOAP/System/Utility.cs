@@ -4,6 +4,18 @@ using UnityEngine;
 
 public static class Utility
 {
+    public static List<T> Shuffle<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            T temp = list[i];
+            int num = UnityEngine.Random.Range(i, list.Count);
+            list[i] = list[num];
+            list[num] = temp;
+        }
+        return list;
+    }
+
     public static IEnumerable<T> FindAllObjects<T>(Vector3 position, float range, LayerMask layer, System.Func<T, bool> filter = null) where T : Component
     {
         List<T> list = new List<T>();

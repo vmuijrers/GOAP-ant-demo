@@ -5,8 +5,4 @@ public abstract class GOAPAgentGoal : Goal<GOAPAgent>
         this.owner = agent;
     }
 
-    public override bool IsViable(State state)
-    {
-        return state.CheckIfEffectsArePresent(Preconditions);
-    }
 }

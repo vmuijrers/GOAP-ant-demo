@@ -5,10 +5,36 @@ using System;
 public class State
 {
     public Effect state;
+    public Dictionary<string, object> DictionaryState { get; private set; } = new Dictionary<string, object>();
 
-    public State()
+    public State() { }
+
+    //public bool CompareState(State otherState)
+    //{
+    //    foreach(var vk in DictionaryState)
+    //    {
+    //        if (!otherState.DictionaryState.ContainsKey(vk.Key)) return false;
+    //        if (vk.Value != otherState.DictionaryState[vk.Key]) return false;
+    //    }
+    //    return true;
+    //}
+
+    public T GetValueFromState<T>(string key)
     {
+        if (DictionaryState.ContainsKey(key))
+        {
+            return (T)DictionaryState[key];
+        }
+        return default(T);
+    }
 
+    public void SetValueInState<T>(string key, T value)
+    {
+        if (!DictionaryState.ContainsKey(key))
+        {
+            DictionaryState.Add(key, default(T));
+        }
+        DictionaryState[key] = value;
     }
 
     public void AddEffectsToState(IEnumerable<EffectState> effects)

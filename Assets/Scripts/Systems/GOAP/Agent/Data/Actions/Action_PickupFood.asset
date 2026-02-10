@@ -23,6 +23,9 @@ MonoBehaviour:
     isActive: 1
   - effect: 32
     isActive: 0
+  advancedConditions:
+  - name: 
+    value: 0
   FoodLayer:
     serializedVersion: 2
     m_Bits: 64

@@ -387,6 +387,43 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e5fd1254b6dde549b37028bca657b87, type: 2}
   - {fileID: 11400000, guid: 00e1ae003ee833945bb03b20ecf6bcb0, type: 2}
   Nest: {fileID: 1063958709}
+  effects:
+  - rid: 6216460868273045504
+  - rid: 6216460868273045505
+  - rid: 6216460868273045506
+  effectComparers:
+  - rid: 6216460868273045507
+  - rid: 6216460868273045508
+  references:
+    version: 2
+    RefIds:
+    - rid: 6216460868273045504
+      type: {class: AdvancedEffectStateFloat, ns: , asm: Assembly-CSharp}
+      data:
+        name: var
+        value: 0
+    - rid: 6216460868273045505
+      type: {class: AdvancedEffectStateFloat, ns: , asm: Assembly-CSharp}
+      data:
+        name: var
+        value: 6
+    - rid: 6216460868273045506
+      type: {class: AdvancedEffectStateGameObject, ns: , asm: Assembly-CSharp}
+      data:
+        name: var
+        value: {fileID: 0}
+    - rid: 6216460868273045507
+      type: {class: AdvancedEffectStateComparerGameObject, ns: , asm: Assembly-CSharp}
+      data:
+        name: var
+        type: 0
+        value: {fileID: 0}
+    - rid: 6216460868273045508
+      type: {class: AdvancedEffectStateComparerFloat, ns: , asm: Assembly-CSharp}
+      data:
+        name: var
+        type: 1
+        value: 5
 --- !u!114 &778442368
 MonoBehaviour:
   m_ObjectHideFlags: 0

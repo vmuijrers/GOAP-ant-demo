@@ -7,6 +7,7 @@ public abstract class Action : ScriptableObject
     public int cost;
     public List<EffectState> preconditions = new List<EffectState>();
     public List<EffectState> postconditions = new List<EffectState>();
+    public List<AdvancedEffectStateFloat> advancedConditions = new List<AdvancedEffectStateFloat>();
 
     protected GOAPAgent agent;
 
