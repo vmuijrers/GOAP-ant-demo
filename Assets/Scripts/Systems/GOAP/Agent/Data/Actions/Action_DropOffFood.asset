@@ -21,4 +21,5 @@ MonoBehaviour:
     isActive: 0
   - effect: 1
     isActive: 1
+  advancedConditions: []
   DropOffTargetName: Nest

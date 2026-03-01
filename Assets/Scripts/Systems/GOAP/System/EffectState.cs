@@ -34,13 +34,12 @@ public struct EffectState
 [System.Serializable]
 public class AdvancedEffectStateBase
 {
-
+    public string name;
 }
 
 [System.Serializable]
 public class AdvancedEffectState<T> : AdvancedEffectStateBase
 {
-    public string name;
     public T value;
 }
 
@@ -152,7 +151,7 @@ public enum GameEventType
 
 public class Condition<T>
 {
-    private List<Predicate<T>> conditions;
+    private List<Predicate<T>> conditions = new List<Predicate<T>>();
 
     public Condition(List<System.Predicate<T>> conditions)
     {
@@ -161,11 +160,7 @@ public class Condition<T>
 
     public bool Evaluate(T target)
     {
-        if(conditions.ToList().TrueForAll((x) => x.Invoke(target)))
-        {
-            return true;
-        }
-        return false;
+        return conditions.ToList().TrueForAll((x) => x.Invoke(target));
     }
 }
 
